@@ -15,6 +15,6 @@ export class BorderCardDirective {
   }
 
   private setBorder(color: string) {
-    this.el.nativeElement.style.border = 'solid 1px ' + color;
+    this.el.nativeElement.style.border = 'solid 2px ' + color;
   }
 }
