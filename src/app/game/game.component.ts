@@ -9,26 +9,21 @@ import { GAMES } from './fake-games';
 })
 export class GameComponent implements OnInit {
 
-  private title: string;
   private games: Game[];
 
-  constructor() {
-    this.title = 'Jouez !';
-   }
-
   ngOnInit() {
-    this.games = GAMES.sort((x, y) => {
-      if (x.name > y.name) {
-        return 1;
-      } else if (x.name < y.name) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
+    this.games = GAMES.sort(this.alphaGameComparer);
   }
 
   onClick() {
     this.games.reverse();
+  }
+
+  private alphaGameComparer(x: Game, y: Game) {
+    if (x.name === y.name) {
+      return 0;
+    } else {
+      return x.name > y.name ? 1 : -1;
+    }
   }
 }

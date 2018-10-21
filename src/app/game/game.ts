@@ -5,3 +5,8 @@ export class Game {
    open: boolean;
    description: string;
 }
+
+class MinMax {
+  min: number;
+  max: number;
+}
