@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
-import { BorderCardDirective } from './game/border-card.directive';
+import { BorderCardDirective } from './border-card.directive';
 
 @NgModule({
   declarations: [

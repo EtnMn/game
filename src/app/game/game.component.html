@@ -4,7 +4,7 @@
 </div>
 <div class="row">
   <div *ngFor="let g of games" class="col s12 m6 l4">
-    <div class="card medium" appGameBorderCard>
+    <div class="card medium" appBorderCard [borderColor]="'#ee6e73'" [borderSize]="1">
       <div class="card-image">
         <img [src]='g.image'>
       </div>

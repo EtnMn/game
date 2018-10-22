@@ -13,7 +13,7 @@ export const GAMES: Game[] = [
     players: { min: 2, max: 6 },
     image: '/assets/images/mikado.jpg',
     open: false,
-    description: 'Le Mikado est un jeu d\'adresse, qui se compose d\'un ensemble de baguettes effilées aux extrémités.'
+    description: 'Le Mikado est un jeu d\'adresse, qui se compose d\'un ensemble de baguettes.'
   },
   {
     name: 'Dames',
