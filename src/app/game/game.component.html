@@ -9,8 +9,8 @@
         <img [src]='g.image'>
       </div>
       <div class="card-content">
-        <span class="card-title">{{ g.name | uppercase}} <span *ngIf="g.open" class="new badge green"></span></span>
-        <p>{{ g.description }}</p>
+        <span class="card-title">{{ g.name }} <span *ngIf="g.open" class="new badge green"></span></span>
+        <p>{{ g.description | readMore:90}}</p>
       </div>
     </div>
   </div>
