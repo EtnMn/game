@@ -1,6 +1,6 @@
 <h1>{{title}}</h1>
 <div class="row">
-    <a class="waves-effect waves-teal btn-flat right" (click)='onClick()'><i class="small material-icons">sort</i></a>
+    <a class="waves-effect waves-teal btn-flat right" (click)='onClick()'><i class="small material-icons">sort_by_alpha</i></a>
 </div>
 <div class="row">
   <div *ngFor="let g of games" class="col s12 m6 l4">
@@ -9,7 +9,7 @@
         <img [src]='g.image'>
       </div>
       <div class="card-content">
-        <span class="card-title">{{ g.name }} <span *ngIf="g.open" class="new badge green"></span></span>
+        <span class="card-title">{{ g.name | uppercase }} <span *ngIf="g.open" class="new badge green"></span></span>
         <p>{{ g.description | readMore:90}}</p>
       </div>
     </div>
