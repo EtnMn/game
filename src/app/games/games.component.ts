@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from './game';
-import { GAMES } from './fake-games';
+import { Router } from '@angular/router';
+import { Game } from '../models/game';
+import { GAMES } from '../models/fake-games';
 
 @Component({
   selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.css']
 })
-export class GameComponent implements OnInit {
+export class GamesComponent implements OnInit {
 
   private games: Game[];
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.games = GAMES.sort(this.alphaGameComparer);
@@ -17,6 +20,10 @@ export class GameComponent implements OnInit {
 
   onClick() {
     this.games.reverse();
+  }
+
+  onClickCard(game: Game) {
+    this.router.navigate(['/game', game.id]);
   }
 
   private alphaGameComparer(x: Game, y: Game) {

@@ -2,6 +2,7 @@ import { Game } from './game';
 
 export const GAMES: Game[] = [
   {
+    id: 1,
     name: 'Dominos',
     players: { min: 2, max: 4 },
     image: '/assets/images/dominos.jpg',
@@ -13,6 +14,7 @@ export const GAMES: Game[] = [
       car d'autres prétendent que le plus vieux jeu de domino aurait été trouvé dans la tombe de Toutânkhamon.`
   },
   {
+    id: 2,
     name: 'Mikado',
     players: { min: 2, max: 6 },
     image: '/assets/images/mikado.jpg',
@@ -22,6 +24,7 @@ export const GAMES: Game[] = [
       que l'on laisse tomber de façon qu'elles s'enchevêtrent, avant de les retirer, une à une, sans faire bouger les autres.`
   },
   {
+    id: 3,
     name: 'Dames',
     players: { min: 2, max: 2 },
     image: '/assets/images/dames.jpg',

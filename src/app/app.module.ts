@@ -1,20 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { GameComponent } from './game/game.component';
+import { GamesComponent } from './games/games.component';
 import { BorderCardDirective } from './border-card.directive';
 import { ReadMorePipe } from './read-more.pipe';
+import { GamePageComponent } from './game-page/game-page.component';
+
+
+const appRoutes: Routes = [
+  { path: 'games', component: GamesComponent },
+  { path: 'game/:id', component: GamePageComponent },
+  { path: '', redirectTo: 'games', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent,
+    GamesComponent,
     BorderCardDirective,
     ReadMorePipe,
+    GamePageComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

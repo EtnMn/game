@@ -1,0 +1,7 @@
+<div *ngIf="selectedGame" class="row">
+    <h2 class="header center">{{ selectedGame.name }}</h2>
+    <div class="card-action">
+      <a href="#" (click)="goBack()">Retour</a>
+    </div>
+</div>
+<h4 *ngIf='!selectedGame' class="center">rien</h4>
