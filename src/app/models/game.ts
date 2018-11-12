@@ -2,6 +2,7 @@ export class Game {
   id: number;
   name: string;
   players: MinMax;
+  age: number;
   image: string;
   open: boolean;
   description: string;

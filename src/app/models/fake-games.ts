@@ -5,6 +5,7 @@ export const GAMES: Game[] = [
     id: 1,
     name: 'Dominos',
     players: { min: 2, max: 4 },
+    age: 4,
     image: '/assets/images/dominos.jpg',
     open: true,
     description: `Les dominos sont un jeu de société d'origine chinoise, utilisant 28 pièces (dans le cas d'un jeu « double-six »).
@@ -17,6 +18,7 @@ export const GAMES: Game[] = [
     id: 2,
     name: 'Mikado',
     players: { min: 2, max: 6 },
+    age: 5,
     image: '/assets/images/mikado.jpg',
     open: false,
     description: `Le Mikado est un jeu d'adresse, praticable de 2 à 6 joueurs.
@@ -27,6 +29,7 @@ export const GAMES: Game[] = [
     id: 3,
     name: 'Dames',
     players: { min: 2, max: 2 },
+    age: 3,
     image: '/assets/images/dames.jpg',
     open: false,
     description: `Les dames ou le jeu de dames est un jeu de société combinatoire abstrait pour deux joueurs.

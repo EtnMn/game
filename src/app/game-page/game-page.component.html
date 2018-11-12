@@ -1,7 +1,73 @@
-<div *ngIf="selectedGame" class="row">
-    <h2 class="header center">{{ selectedGame.name }}</h2>
-    <div class="card-action">
-      <a href="#" (click)="goBack()">Retour</a>
-    </div>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red lighten-2" (click)="goBack()">
+    <i class="large material-icons">arrow_back</i>
+  </a>
 </div>
-<h4 *ngIf='!selectedGame' class="center">rien</h4>
+<div *ngIf="selectedGame" class="row">
+  <div class="col l8 s12">
+    <div class="card">
+      <div class="card-image">
+        <img [src]='selectedGame.image'>
+        <span class="card-title">{{ selectedGame.name }}</span>
+      </div>
+      <div class="card-content">
+        <p>{{ selectedGame.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col l4 s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="card teal lighten-1">
+          <div class="card-content white-text">
+            <span class="card-title">Informations</span>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Nombre de joueurs</td>
+                  <td *ngIf="selectedGame.players.min !== selectedGame.players.max">{{ selectedGame.players.min }} à {{
+                    selectedGame.players.max }}</td>
+                  <td *ngIf="selectedGame.players.min === selectedGame.players.max">{{ selectedGame.players.min }}</td>
+                </tr>
+                <tr>
+                  <td>Age minimum</td>
+                  <td>{{ selectedGame.age }} ans</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="card teal darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Prochaines sessions</span>
+            <table>
+              <tbody>
+                <tr>
+                  <td>10 janvier</td>
+                  <td><a class="waves-effect waves-light btn-small fullwidth">S'inscrire</a></td>
+                </tr>
+                <tr>
+                  <td>5 mai</td>
+                  <td><a class="waves-effect waves-light btn-small fullwidth disabled">Complet</a></td>
+                </tr>
+                <tr>
+                  <td>10 septembre </td>
+                  <td><a class="waves-effect waves-light btn-small fullwidth">S'inscrire</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf='!selectedGame' class="row">
+  <div class="col s6 push-s3 center">
+    <h1>?</h1>
+    <h4>Jeu non trouvé</h4>
+    <a routerLink="/games" class="waves-effect waves-teal btn-flat">Retourner à l' accueil</a>
+  </div>
+</div>
