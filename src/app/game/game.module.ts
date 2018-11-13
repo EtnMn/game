@@ -5,7 +5,7 @@ import { GameRoutingModule } from './game-routing.module';
 
 import { GamesComponent } from './games/games.component';
 import { GamePageComponent } from './game-page/game-page.component';
-
+import { GameService } from './game.service';
 @NgModule({
   imports: [
     CommonModule,

@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Game } from '../models/game';
-import { GAMES } from '../models/fake-games';
+import { GameService } from '../game.service';
 
 @Component({
   selector: 'app-game',
   templateUrl: './games.component.html',
-  styleUrls: ['./games.component.css']
+  styleUrls: ['./games.component.css'],
 })
 export class GamesComponent implements OnInit {
-
   private games: Game[];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private gameService: GameService) {}
 
   ngOnInit() {
-    this.games = GAMES.sort(this.alphaGameComparer);
+    this.games = this.gameService.getGames().sort(this.alphaGameComparer);
   }
 
   onClick() {
