@@ -1,0 +1,10 @@
+<!-- <form *ngIf="registration" (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+
+</form> -->
+<div *ngIf='!registration' class="row">
+  <div class="col s6 push-s3 center">
+    <h1>?</h1>
+    <h4>Inscription non trouvée</h4>
+    <a routerLink="/games" class="waves-effect waves-teal btn-flat">Retourner à l' accueil</a>
+  </div>
+</div>

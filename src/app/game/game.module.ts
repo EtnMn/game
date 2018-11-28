@@ -5,7 +5,7 @@ import { GameRoutingModule } from './game-routing.module';
 
 import { GamesComponent } from './games/games.component';
 import { GamePageComponent } from './game-page/game-page.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationFormComponent } from './registration/registration-form.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,7 +15,7 @@ import { RegistrationComponent } from './registration/registration.component';
   declarations: [
     GamesComponent,
     GamePageComponent,
-    RegistrationComponent,
+    RegistrationFormComponent,
   ]
 })
 export class GameModule { }

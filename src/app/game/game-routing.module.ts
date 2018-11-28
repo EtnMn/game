@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 
 import { GamesComponent } from './games/games.component';
 import { GamePageComponent } from './game-page/game-page.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationFormComponent } from './registration/registration-form.component';
 
 const gameRoutes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'game/:id', component: GamePageComponent },
-  { path: 'session/:id/registration', component: RegistrationComponent}
+  { path: 'session/:id/registration', component: RegistrationFormComponent}
 ];
 
 @NgModule({
